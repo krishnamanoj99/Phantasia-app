@@ -2,7 +2,7 @@ import {backendUrl} from "./config";
 
 export const makeUnauthenticatedPOSTRequest = async (route, body) => {
     const response = await fetch(backendUrl + route, {
-        mode: 'no-cors',
+        mode: "no-cors",
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -16,7 +16,7 @@ export const makeUnauthenticatedPOSTRequest = async (route, body) => {
 export const makeAuthenticatedPOSTRequest = async (route, body) => {
     const token = getToken();
     const response = await fetch(backendUrl + route, {
-        mode: 'no-cors',
+        mode: "no-cors",
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -31,7 +31,7 @@ export const makeAuthenticatedPOSTRequest = async (route, body) => {
 export const makeAuthenticatedGETRequest = async (route) => {
     const token = getToken();
     const response = await fetch(backendUrl + route, {
-        mode: 'no-cors',
+        mode: "no-cors",
         method: "GET",
         headers: {
             "Content-Type": "application/json",
