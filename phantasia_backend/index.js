@@ -12,8 +12,8 @@ const authRoutes = require("./routes/auth");
 const pinRoutes = require("./routes/pin");
 const savedRoutes = require("./routes/saved");
 
-// const cors = require("cors");
-// app.use(cors());
+const cors = require("cors");
+app.use(cors());
 
 const mongoose = require("mongoose");
 mongoose
