@@ -1,7 +1,5 @@
-import {backendUrl} from "./config";
-
 export const makeUnauthenticatedPOSTRequest = async (route, body) => {
-    const response = await fetch(backendUrl + route, {
+    const response = await fetch(process.env.backendUrl + route, {
         mode: "no-cors",
         method: "POST",
         headers: {
@@ -15,7 +13,7 @@ export const makeUnauthenticatedPOSTRequest = async (route, body) => {
 
 export const makeAuthenticatedPOSTRequest = async (route, body) => {
     const token = getToken();
-    const response = await fetch(backendUrl + route, {
+    const response = await fetch(process.env.backendUrl + route, {
         mode: "no-cors",
         method: "POST",
         headers: {
@@ -30,7 +28,7 @@ export const makeAuthenticatedPOSTRequest = async (route, body) => {
 
 export const makeAuthenticatedGETRequest = async (route) => {
     const token = getToken();
-    const response = await fetch(backendUrl + route, {
+    const response = await fetch(process.env.backendUrl + route, {
         mode: "no-cors",
         method: "GET",
         headers: {
