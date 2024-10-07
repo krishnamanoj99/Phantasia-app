@@ -2,9 +2,8 @@ import LoggedInContainer from "../containers/LoggedInContainer";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useState, useEffect } from "react";
 import PinsContainer from "../components/shared/PinsContainer";
-// import { openAI_API_KEY } from "../api/config";
 
-const API_KEY = process.env.openAI_API_KEY;
+const API_KEY = "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";
 const AiComponent = () => {
     const [searchText, setSearchText] = useState("");
     const [newImages, setNewImages] = useState([]);
